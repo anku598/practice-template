@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
 
 * {padding: 0; margin: 0;}
 img{
@@ -8,11 +9,18 @@ body{
   width: 100vw;
   height: auto;
   background: #f9f8f8;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+
 }
+
+/**** Nav CSS goes Here ****/
 
 .header{
   background: #ffffff;
   padding: 0.8em 0em;
+  box-shadow: -1px 2px 2px -1px rgba(34,34,34,.2);
+  position: static;
 }
 
 .container{
@@ -110,3 +118,79 @@ body{
     border-bottom: none;
   }
 }
+
+
+/**** About Section CSS***/
+
+.story{
+  background: url(../img/story-bg.png);
+  text-align: center;
+  padding: 2em 0;
+  width: 100%;
+  margin-bottom: 2em;
+  
+}
+.title{
+  margin-bottom: 2em;
+  font-size: 55px;
+}
+.story-para{
+  font-size: 18px;
+  padding: 20px 20px 0;
+  line-height: 2;
+}
+
+/*** Team Area CSS Is Here ***/
+
+.page-content-inner{
+  display: flex;
+  justify-content: space-around;
+
+}
+/* .member-one{
+  display: flex;
+}
+.member-two{
+  display: flex;
+}
+.member-three{
+  display: flex;
+} */
+
+
+.member{
+  padding: 20px 30px;
+  border-radius: 18px!important;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.member img{
+}
+.info{
+  padding: 15px 0px 0;
+  text-align: center;
+  color: #4d819e;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-1{
+  width: 20%;
+  display: flex;
+  margin: 20px;
+}
+.name{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.designation{
+  font-language-override: 1.1em;
+  font-weight: 400;
+  margin-bottom: 10px;
+} 
+.summ{}
+
+.social{}
+.btn-link{}
+.social{}

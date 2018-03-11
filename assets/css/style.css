@@ -2,7 +2,7 @@
 
 * {padding: 0; margin: 0;}
 img{
-  width: 100%;
+  max-width: 100%;
 }
 
 body{
@@ -21,7 +21,10 @@ body{
   background: #ffffff;
   padding: 0.8em 0em;
   box-shadow: -1px 2px 2px -1px rgba(34,34,34,.2);
-  position: static;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .container{
@@ -50,7 +53,6 @@ body{
 
 .logo, .navigation {
   list-style: none;
-  text-transform: uppercase;
 }
 
 .logo a, .navigation a {
@@ -61,6 +63,7 @@ body{
 
 .navigation  {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation li:last-of-type a{
@@ -97,7 +100,7 @@ body{
 
 /* ****** ****** */
 @media all and (max-width: 600px) {
-  
+
   .logo a img{
     margin: .25em 0;
     align-self: center; /* align the logo to the left side of 'flex-container' */
@@ -156,51 +159,239 @@ body{
 }
 .member-three{
   display: flex;
-} */
+  } */
 
 
-.member{
-  padding: 1.2em 2em 5em;
-  border-radius: 18px!important;
-  background-color: #fff;
-  text-align: center;
-  width: 100%;
-}
-.member img{
+  .member{
+    padding: 1.2em 2em 5em;
+    border-radius: 18px!important;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+  }
+  .member img{
     border-radius: 20px!important;
     background-color: #1f6874;
     box-shadow: 0 7px 9px 0 rgba(29,29,29,.35)!important;
     margin-left: auto;
     margin-right: auto;
+  }
+  .info{
+    padding: 15px 0px 0;
+    text-align: center;
+    color: #4d819e;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-1{
+    flex: 1;
+    display: flex;
+    color: #000;
+  }
+  .name{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .designation{
+    font-language-override: 1.1em;
+    font-weight: 400;
+    margin-bottom: 10px;
+  } 
+  .summ{}
+
+  .social{}
+  .btn-link{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4875B4;
+  }
+  .social{}
+
+  /*** Coin Section CSS Here**/
+
+  .coin-section{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+    margin-top: 2em;
+
+  }
+  .top-coins{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0em 1em;
+    flex-wrap: wrap; 
+  }
+  .top-coins span{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .top-coins span:last-child{
+    color: red;
+  }
+
+
+  /** Crypto Section Css Goes Here***/
+
+  .crypto-section{
+    margin-top: 8em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .crypto-title{
+    font-size: 4em;
+  }
+  .tag{
+    font-size: 3em;
+  }
+  .qoute{
+    font-size: 24px;
+  }
+  .form-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
 }
-.info{
-  padding: 15px 0px 0;
-  text-align: center;
-  color: #4d819e;
+.row1{
+  width: 100%;
+  text-align: right;
+}
+.row1 > span{}
+.row2{
+  background: url(../img/bg.png)no-repeat center;
+  width: 100%;
+  background-size: cover;
+  padding: 15px 0 30px 10px;
+  margin: 0;
+  border-radius: 20px!important;
+  width: 100%;
+  box-shadow: 0 0 21.17px 7.83px rgba(29,29,29,.19);
+}
+.row3{
+  position: relative;
+}
+.row3 img{
+  /*background: url(../img/rect1.png)no-repeat;*/
+}
+.form{
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 2em;
+  position: relative;
+}
+.form-left{
   display: flex;
   flex-direction: column;
+  flex: 1; 
 }
-
-.flex-1{
-  flex: 1;
+.ytext{
+  color: #fff;
+  font-size: 23px;
+  padding-left: 6px;
+  font-weight: 100;
+}
+.selected{
+  width: 92%;
+  padding: 0 10px;
+  background-color: #fff;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.form-right{
   display: flex;
-  color: #000;
-}
-.name{
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-.designation{
-  font-language-override: 1.1em;
-  font-weight: 400;
-  margin-bottom: 10px;
-} 
-.summ{}
+  flex-direction: column;
+  flex: 1;
 
-.social{}
-.btn-link{
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #4875B4;
 }
-.social{}
+.start-btn{
+ position: absolute;
+ top: 10%;
+ left: 16%;
+ background: url(../img/rect1.png)no-repeat;
+ border: 0px;
+ width: 100%;
+ height: 100%;
+ cursor: pointer;
+}
+/*.start-btn:hover{
+  background: url(../img/rect2.png)no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  }*/
+  .start-btn span{
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 27%;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .icon1{
+    position: absolute;
+    width: 30px;
+    left: 40%;
+    top: 62px;
+  }
+  .icon2{
+    position: absolute;
+    width: 30px;
+    right: 11%;
+    top: 62px;
+  }
+
+  /*** partner CSS is Here***/
+
+  .partner{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .partner-title{
+    font-size: 34px;
+    font-weight: 600;
+    display: flex;
+  }
+  .partner-title::after{
+    width: 37%;
+    height: 2px;
+    background:#000;
+    display: block;
+    content: '';
+    position: absolute;
+    right: 80px;
+    bottom: -10px;
+
+  }
+  .partner-logo{
+    margin-top: 1em;
+  }
+  .partner-logo img{
+    max-height: 80px;
+    margin-right: 1em;
+    vertical-align: middle;
+
+  }
